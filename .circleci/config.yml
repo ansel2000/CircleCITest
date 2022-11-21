@@ -22,7 +22,7 @@ jobs:
             - ~/.m2
           key: '<ProjectName>-{{ checksum "pom.xml" }}'
       -
-        run: 'mvn test -P single'
+        run: 'mvn test -P first'
       -
         store_test_results:
           path: target/surefire-reports
