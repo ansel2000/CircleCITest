@@ -3,12 +3,13 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/CircleCITest/
+    working_directory: ~/CircleCITest/junit5-examples
     docker:
     -
       image: 'circleci/openjdk:8-jdk-stretch'
     steps:
-      - checkout
+      - checkout:
+          path: ~/CircleCITest
       -
         restore_cache:
           key: 'junit5-examples-{{ checksum "pom.xml" }}'
