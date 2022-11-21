@@ -12,14 +12,14 @@ jobs:
           path: ~/CircleCITest
       -
         restore_cache:
-          key: 'junit5-examples-{{ checksum "pom.xml" }}'
+          key: 'CircleCITest-{{ checksum "pom.xml" }}'
       -
         run: 'mvn dependency:go-offline'
       -
         save_cache:
           paths:
             - ~/.m2
-          key: 'junit5-examples-{{ checksum "pom.xml" }}'
+          key: 'CircleCITest-{{ checksum "pom.xml" }}'
       -
         run: 'mvn test -P first'
       -
