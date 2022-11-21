@@ -8,7 +8,7 @@ jobs:
     -
       image: 'circleci/openjdk:8-jdk-stretch'
     steps:
-      - checkout
+      - checkout:
           path: ~/CircleCITest
       -
         restore_cache:
