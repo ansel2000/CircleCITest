@@ -3,7 +3,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/CircleCITest/junit5-examples
+    working_directory: ~/junit5-examples
     docker:
     -
       image: 'circleci/openjdk:8-jdk-stretch'
