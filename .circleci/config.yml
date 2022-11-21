@@ -3,7 +3,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/CircleCITest
+    working_directory: ~/CircleCITest/junit5-examples
     docker:
     -
       image: 'circleci/openjdk:8-jdk-stretch'
@@ -11,14 +11,14 @@ jobs:
       - checkout
       -
         restore_cache:
-          key: 'CircleCITest-{{ checksum "pom.xml" }}'
+          key: '/CircleCITest/junit5-examples-{{ checksum "pom.xml" }}'
       -
         run: 'mvn dependency:go-offline'
       -
         save_cache:
           paths:
             - ~/.m2
-          key: 'CircleCITest-{{ checksum "pom.xml" }}'
+          key: '/CircleCITest/junit5-examples-{{ checksum "pom.xml" }}'
       -
         run: 'mvn test -P first'
       -
