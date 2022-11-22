@@ -7,7 +7,7 @@
         "build": "browserstack-build-1",
         "name": "first_test",
         "browserstack.debug": true,
-        "app": "Wiki"
+        "app": "bs://341b5a05fcd364eb758b4501e43f8951f544aa58"
     },
 
     "environments": [
