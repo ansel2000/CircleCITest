@@ -9,7 +9,7 @@ jobs:
       image: 'circleci/openjdk:8-jdk-stretch'
     steps:
       - checkout:
-          path: ~/CircleCITest
+          path: ~/CircleCITest/junit5-examples
       -
         restore_cache:
           key: 'CircleCITest-{{ checksum "pom.xml" }}'
