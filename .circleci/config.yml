@@ -3,7 +3,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/CircleCITest/junit5-examples
+    working_directory: ~/CircleCITest/testng
     docker:
     -
       image: 'circleci/openjdk:8-jdk-stretch'
@@ -21,7 +21,7 @@ jobs:
             - ~/.m2
           key: 'CircleCITest-{{ checksum "pom.xml" }}'
       -
-        run: 'mvn clean test -P first'
+        run: 'mvn clean test -P single'
       -
         store_test_results:
           path: target/surefire-reports
