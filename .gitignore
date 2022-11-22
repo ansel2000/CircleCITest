@@ -3,3 +3,16 @@ target/
 local.log
 .idea
 *.iml
+*.png
+target/
+local.log
+.idea
+*.iml
+.gradle
+build/
+.DS_Store
+browserstack.err
+gradle/
+gradlew
+gradlew.bat
+logs/
